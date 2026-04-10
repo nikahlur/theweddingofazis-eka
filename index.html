@@ -157,7 +157,7 @@
         /* ================= PAGE 4: RUNDOWN (OLD TRAFFORD MU BG) ================= */
         #rundown {
             /* Background Old Trafford dengan overlay merah klub agar teks tetap terbaca */
-            background-image: linear-gradient(rgba(170, 0, 0, 0.8), rgba(26, 26, 26, 0.95)), url('https://difficult-harlequin-rpfpwjxr2k.edgeone.app/kgjkgh_waifu2x_photo_noise3_scale.png');
+            background-image: linear-gradient(rgba(170, 0, 0, 0.8), rgba(26, 26, 26, 0.95)), url('https://image2url.com/r2/default/files/1775811909064-66751f16-ed84-4f1d-b5a7-db1586a7f0b7.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -267,6 +267,13 @@
             .music-player { padding: 15px 25px; gap: 15px; flex-direction: column; border-radius: 20px; }
             .timeline { padding-left: 30px; }
             .timeline-item::before { left: -43px; }
+        }
+
+        @media (min-width: 768px) {
+            h2 { font-size: 3rem; }
+            .gallery-container { column-count: 3; }
+            section { padding: 100px 40px; }
+            .music-player { bottom: 40px; right: 40px; }
         }
 
     </style>
