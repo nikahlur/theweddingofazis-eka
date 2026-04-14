@@ -330,70 +330,38 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* Wrapper untuk mempertahankan ukuran desktop */
+.desktop-wrapper {
+    width: 1200px;              /* Lebar desain desktop */
+    margin: 0 auto;
+    transform-origin: top center;
+}
 
-            .text-content,
-            .photo-side {
-                width: 100%;
-                max-width: 100%;
-            }
+/* Responsif untuk tablet */
+@media (max-width: 1200px) {
+    .desktop-wrapper {
+        transform: scale(calc(100vw / 1200));
+    }
+}
 
-            .large-photo {
-                height: 250px;
-            }
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
 
-            .grid-4 {
-                grid-template-columns: 1fr;
-                /* Stack 4 foto di HP */
-            }
-
-            /* Halaman 1 */
-            #page-1 {
-                border: 10px solid #fff;
-                padding: 40px 10px;
-            }
-
-            .couple-photos-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .arc-photo {
-                height: 250px;
-            }
-
-            .cover-couple-name {
-                font-size: 2.2rem;
-            }
-
-            .login-box {
-                padding: 25px;
-            }
-
-            input[type="text"],
-            button {
-                font-size: 1.1rem;
-                padding: 15px;
-            }
-
-            /* Timeline */
-            .timeline {
-                padding-left: 25px;
-            }
-
-            .timeline-item h3 {
-                font-size: 1.6rem;
-            }
-
-            .timeline-item p {
-                font-size: 1.1rem;
-            }
-        }
+    .desktop-wrapper {
+        transform: scale(calc(100vw / 1200));
+    }
+}
+        .desktop-wrapper {
+    transform: scale(max(calc(100vw / 1200), 0.6));
+}
     </style>
 </head>
 
 <body>
-
+<div class="desktop-wrapper">
     <audio id="bg-music" loop></audio>
 
     <!-- Halaman 1 -->
@@ -767,6 +735,7 @@
             }
         }
     </script>
+    </div>
 </body>
 
 </html>
